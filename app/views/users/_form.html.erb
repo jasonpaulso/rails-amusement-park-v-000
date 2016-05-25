@@ -1,0 +1,26 @@
+<%= form_for(@user) do |f| %>
+  <div class="form-group">
+    <%= f.label :name, class: "form-control-label"%>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password, class: "form-control-label"%>
+    <%= f.text_field :password, class: "form-control", type: "password" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :height, class: "form-control-label" %>
+    <%= f.text_field :height, class: "form-control" %>
+    <%= f.label :happiness, class: "form-control-label"%>
+    <%= f.text_field :happiness, class: "form-control" %>
+    <%= f.label :nausea, class: "form-control-label" %>
+    <%= f.text_field :nausea, class: "form-control" %>
+    <%= f.label :tickets, class: "form-control-label"%>
+    <%= f.text_field :tickets, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :admin, class: "form-control-label"%>
+    <%= f.check_box :admin%>
+  </div>
+    <%= f.submit "Create User", class: "btn btn-default btn-primary"%>
+<%end%>
+ 

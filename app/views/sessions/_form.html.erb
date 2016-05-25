@@ -1,0 +1,6 @@
+<%= form_for(:user, url: signin_path) do |f| %>
+ <div class="form-group">
+  <%= f.collection_select(:id, User.all, :id, :name, :include_blank => true, :class =>"form-control") %>
+  <%= f.submit 'Sign In', class: "btn btn-default btn-primary" %>
+  </div>
+<% end %>

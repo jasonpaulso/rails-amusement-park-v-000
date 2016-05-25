@@ -1,0 +1,15 @@
+<div class="row">
+  <%= link_to_if current_user.admin, "New Attraction", new_attraction_path %>
+</div>
+<div class="row">
+<h1>Current Attractions:</h1>
+  <ul>
+  <% @attractions.each do |attraction| %>
+    <% if current_user.admin %>
+      <li><%= link_to "Show #{attraction.name}", attraction_path(attraction) %></li>
+    <%else%>
+      <li><%= link_to "Go on #{attraction.name}", attraction_path(attraction) %></li>
+    <%end%>
+  <%end%>
+  </ul>
+</div>

@@ -1,0 +1,12 @@
+<div class="row">
+  <h1>Welcome <%=@user.name%></h1>
+  <ul>
+    <li>Mood: <%=@user.mood%></li>
+    <li>Nausea: <%=@user.nausea%></li>
+    <li>Happiness: <%=@user.happiness%></li>
+    <li>Tickets: <%=@user.tickets%></li>
+    <li>Height: <%=@user.height%></li>
+    <li>User Status: <%= "ADMIN" if @user.admin %></li>
+  </ul>
+</div>
+
